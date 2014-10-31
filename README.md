@@ -14,8 +14,8 @@ In node:
 ```js
 var files = require('files-io');
 
-files.read(['README.md', 'package.json'], 'utf8', function(error, data) {
-    console.log(error, data);
+files.read(['README.md', 'package.json'], 'utf8', function(error, read, pack) {
+    console.log(error, read, pack);
 });
 ```
 
