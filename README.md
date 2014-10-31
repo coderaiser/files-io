@@ -5,7 +5,7 @@ Read many files with node
 
 # Install
 
-`npm i format-io --save`
+`npm i files-io --save`
 
 # How to use?
 
