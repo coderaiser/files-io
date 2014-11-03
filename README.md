@@ -18,6 +18,21 @@ files.read(['README.md', 'package.json'], 'utf8', function(error, read, pack) {
     console.log(error, read, pack);
 });
 
+
+/* Easy way to create pipe which would handle all error events and redirect tham to callback. */
+var NameFrom    = 'README.md',
+    NameTo      = 'README_COPY.gz',
+    
+    options     = {
+        gzip: true
+    };
+
+files.pipe(NameFrom, NameTo, options, function(error) {
+    var msg = 'done';
+    
+    console.log(error || msg);
+});
+
 /* join couple files and save them to new file with streams */
 var fs          = require('fs'),
     NAME        = 'Join',
