@@ -9,8 +9,6 @@ Read many files with node
 
 # How to use?
 
-In node:
-
 ```js
 var files = require('files-io');
 
