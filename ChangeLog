@@ -1,3 +1,9 @@
+2014.12.22, v1.2.2
+
+feature:
+- (files) rm util-io, add checkup, extend, itype
+
+
 2014.11.25, v1.2.1
 
 feature:
