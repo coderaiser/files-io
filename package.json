@@ -14,7 +14,6 @@
     "read"
   ],
   "dependencies": {
-    "checkup": "~1.0.2",
     "extendy": "~1.0.0",
     "itype": "~1.0.0",
     "pipe-io": "~1.1.0"
