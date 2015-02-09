@@ -1,3 +1,9 @@
+2015.02.09, v1.2.5
+
+fix:
+- (files) pipeFiles: crash when no gzip
+
+
 2015.02.02, v1.2.4
 
 feature:
