@@ -16,7 +16,7 @@
   "dependencies": {
     "extendy": "~1.0.0",
     "itype": "~1.0.0",
-    "pipe-io": "~1.1.0"
+    "pipe-io": "~1.2.0"
   },
   "license": "MIT"
 }
