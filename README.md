@@ -10,33 +10,31 @@ Read many files with node
 # How to use?
 
 ```js
-var files = require('files-io');
+const files = require('files-io');
 
-files.read(['README.md', 'package.json'], 'utf8', function(error, allData) {
+files.read(['README.md', 'package.json'], 'utf8', (error, allData) => {
     console.log(error, allData);
 });
 
 
 /* Easy way to create pipe which would handle all error events and redirect tham to callback. */
-var NameFrom    = 'README.md',
-    NameTo      = 'README_COPY.gz',
+const NameFrom = 'README.md';
+const NameTo = 'README_COPY.gz';
     
-    options     = {
-        gzip: true
-    };
+const options = {
+    gzip: true
+};
 
-files.pipe(NameFrom, NameTo, options, function(error) {
-    var msg = 'done';
-    
-    console.log(error || msg);
+files.pipe(NameFrom, NameTo, options, (error) => {
+    console.log(error || 'done');
 });
 
 /* join couple files and save them to new file with streams */
-var fs          = require('fs'),
-    NAME        = 'Join',
-    writeStream = fs.createWriteStream(NAME);
+const fs = require('fs');
+const NAME = 'Join';
+const writeStream = fs.createWriteStream(NAME);
 
-files.readPipe(['README.md', 'package.json'], writeStream, function(error) {
+files.readPipe(['README.md', 'package.json'], writeStream, (error) => {
     if (error)
         console.log(error.message);
 });
@@ -45,3 +43,4 @@ files.readPipe(['README.md', 'package.json'], writeStream, function(error) {
 # License
 
 MIT
+
