@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git://github.com/coderaiser/files-io.git"
   },
+  "scripts": {
+    "lint": "eslint lib"
+  },
   "keywords": [
     "files",
     "read"
@@ -21,5 +24,9 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-node": "^6.0.1"
+  }
 }
