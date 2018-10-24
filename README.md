@@ -1,5 +1,17 @@
-Files-io
+# Files-io [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 ========
+
+[NPMIMGURL]:                https://img.shields.io/npm/v/files-io.svg?style=flat
+[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/files-io/master.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/files-io.svg?style=flat
+[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]:                   https://npmjs.org/package/files-io "npm"
+[BuildStatusURL]:           https://travis-ci.org/coderaiser/files-io  "Build Status"
+[DependencyStatusURL]:      https://david-dm.org/coderaiser/files-io "Dependency Status"
+[LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
+
+[CoverageURL]:              https://coveralls.io/github/coderaiser/readify?branch=master
+[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/readify/badge.svg?branch=master&service=github
 
 Read many files with node.
 
