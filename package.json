@@ -10,23 +10,31 @@
     "url": "git://github.com/coderaiser/files-io.git"
   },
   "scripts": {
-    "lint": "eslint lib"
+    "lint": "redrun lint:*",
+    "lint:lib": "eslint lib",
+    "lint:test": "eslint -c .eslintrc.test test",
+    "test": "tape test/*.js",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "files",
     "read"
   ],
   "dependencies": {
-    "extendy": "^1.0.0",
-    "itype": "^2.0.0",
     "pipe-io": "^3.0.9"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=8.3.0"
   },
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "eslint": "^5.7.0",
-    "eslint-plugin-node": "^7.0.1"
+    "eslint-plugin-node": "^7.0.1",
+    "nyc": "^13.1.0",
+    "redrun": "^7.0.2",
+    "tape": "^4.9.1",
+    "try-to-catch": "^1.0.2"
   }
 }
