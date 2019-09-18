@@ -5,7 +5,7 @@ const os = require('os');
 const {join} = require('path');
 
 const tryToCatch = require('try-to-catch');
-const test = require('tape');
+const test = require('supertape');
 const files = require('..');
 
 test('files: read', async (t) => {
@@ -20,7 +20,7 @@ test('files: read', async (t) => {
     const expected = {
         [`${dir}/package.json`]: fs.readFileSync(`${dir}/package.json`),
         [`${dir}/README.md`]: fs.readFileSync(`${dir}/README.md`),
-    }
+    };
     
     t.deepEqual(result, expected, 'should equal');
     t.end();
@@ -45,7 +45,7 @@ test('files: pipe: gzip', async (t) => {
     const to = join(tmpDir, 'README_COPY.gz');
     
     const [e] = await tryToCatch(files.pipe, from, to, {
-        gzip: true
+        gzip: true,
     });
     
     fs.unlinkSync(to);
@@ -60,7 +60,7 @@ test('files: pipe: gunzip', async (t) => {
     const to = join(tmpDir, 'README_COPY.gz');
     
     const [e] = await tryToCatch(files.pipe, from, to, {
-        gunzip: true
+        gunzip: true,
     });
     
     t.ok(e, 'should be error');
@@ -77,7 +77,7 @@ test('files: pipe: range', async (t) => {
         range: {
             start: 0,
             end: 10,
-        }
+        },
     });
     
     fs.unlinkSync(to);

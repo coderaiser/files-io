@@ -10,12 +10,12 @@
     "url": "git://github.com/coderaiser/files-io.git"
   },
   "scripts": {
-    "lint": "redrun lint:*",
-    "lint:lib": "eslint lib",
-    "lint:test": "eslint -c .eslintrc.test test",
-    "test": "tape test/*.js",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "fix:lint": "madrun fix:lint",
+    "lint": "madrun lint",
+    "lint:test": "madrun lint:test",
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "keywords": [
     "files",
@@ -32,8 +32,11 @@
     "coveralls": "^3.0.2",
     "eslint": "^6.4.0",
     "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^2.0.0",
+    "madrun": "^3.0.3",
     "nyc": "^14.1.1",
     "redrun": "^7.0.2",
+    "supertape": "^1.2.3",
     "tape": "^4.9.1",
     "try-to-catch": "^1.0.2"
   }
