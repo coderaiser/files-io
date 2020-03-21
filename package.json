@@ -37,6 +37,6 @@
     "nyc": "^15.0.0",
     "redrun": "^7.0.2",
     "supertape": "^1.2.3",
-    "try-to-catch": "^1.0.2"
+    "try-to-catch": "^3.0.0"
   }
 }
