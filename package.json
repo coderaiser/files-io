@@ -22,7 +22,8 @@
     "read"
   ],
   "dependencies": {
-    "pipe-io": "^4.0.0"
+    "pipe-io": "^4.0.0",
+    "putout": "^13.9.1"
   },
   "engines": {
     "node": ">=8.3.0"
