@@ -36,7 +36,7 @@
     "eslint-plugin-putout": "^6.13.1",
     "madrun": "^8.6.2",
     "nyc": "^15.0.0",
-    "supertape": "^1.2.3",
+    "supertape": "^4.8.1",
     "try-to-catch": "^3.0.0"
   }
 }
