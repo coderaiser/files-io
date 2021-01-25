@@ -1,3 +1,14 @@
+2021.01.25, v4.0.0
+
+feature:
+- (files-io) drop support of node < 14
+- (package) eslint v7.18.0
+- (package) supertape v4.8.1
+- (package) putout v13.9.1
+- (package) eslint-plugin-putout v6.13.1
+- (package) madrun v8.6.2
+
+
 2020.03.21, v3.0.2
 
 feature:
