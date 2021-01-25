@@ -1,6 +1,10 @@
 'use strict';
 
-const fs = require('fs');
+const {
+    createReadStream,
+    createWriteStream,
+} = require('fs');
+const {readFile, unlink} = require('fs/promises');
 const os = require('os');
 const {join} = require('path');
 
@@ -18,8 +22,8 @@ test('files: read', async (t) => {
     const result = await files.read(names);
     
     const expected = {
-        [`${dir}/package.json`]: fs.readFileSync(`${dir}/package.json`),
-        [`${dir}/README.md`]: fs.readFileSync(`${dir}/README.md`),
+        [`${dir}/package.json`]: await readFile(`${dir}/package.json`),
+        [`${dir}/README.md`]: await readFile(`${dir}/README.md`),
     };
     
     t.deepEqual(result, expected, 'should equal');
@@ -33,7 +37,7 @@ test('files: pipe', async (t) => {
     
     const [e] = await tryToCatch(files.pipe, from, to);
     
-    fs.unlinkSync(to);
+    await unlink(to);
     
     t.notOk(e, 'should not be error');
     t.end();
@@ -48,7 +52,7 @@ test('files: pipe: gzip', async (t) => {
         gzip: true,
     });
     
-    fs.unlinkSync(to);
+    await unlink(to);
     
     t.notOk(e, 'should not be error');
     t.end();
@@ -80,7 +84,7 @@ test('files: pipe: range', async (t) => {
         },
     });
     
-    fs.unlinkSync(to);
+    await unlink(to);
     
     t.notOk(e, 'should not be error');
     t.end();
@@ -90,12 +94,12 @@ test('files: pipe: streams', async (t) => {
     const tmpDir = os.tmpdir();
     const from = join(__dirname, '..', 'README.md');
     const to = join(tmpDir, 'README_COPY.gz');
-    const fromStream = fs.createReadStream(from);
-    const toStream = fs.createWriteStream(to);
+    const fromStream = createReadStream(from);
+    const toStream = createWriteStream(to);
     
     const [e] = await tryToCatch(files.pipe, fromStream, toStream);
     
-    fs.unlinkSync(to);
+    await unlink(to);
     
     t.notOk(e, 'should not be error');
     t.end();
@@ -106,11 +110,11 @@ test('files: readPipe', async (t) => {
     const file1 = join(__dirname, '..', 'README.md');
     const file2 = join(__dirname, '..', 'package.json');
     const to = join(tmpDir, 'README_COPY.gz');
-    const stream = fs.createWriteStream(to);
+    const stream = createWriteStream(to);
     
     const [e] = await tryToCatch(files.readPipe, [file1, file2], stream);
     
-    fs.unlinkSync(to);
+    await unlink(to);
     
     t.notOk(e, 'should not be error');
     t.end();
