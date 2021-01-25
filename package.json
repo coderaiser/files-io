@@ -33,9 +33,8 @@
     "eslint": "^6.4.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^3.4.0",
-    "madrun": "^5.4.5",
+    "madrun": "^8.6.2",
     "nyc": "^15.0.0",
-    "redrun": "^7.0.2",
     "supertape": "^1.2.3",
     "try-to-catch": "^3.0.0"
   }
