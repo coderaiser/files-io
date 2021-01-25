@@ -1,8 +1,6 @@
-'use strict';
+import {run} from 'madrun';
 
-const {run} = require('madrun');
-
-module.exports = {
+export default {
     'fix:lint': () => run('lint', '--fix'),
     'lint': () => 'putout .',
     'fresh:lint': () => run('lint', '--fresh'),
