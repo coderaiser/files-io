@@ -22,8 +22,7 @@
     "read"
   ],
   "dependencies": {
-    "pipe-io": "^4.0.0",
-    "putout": "^13.9.1"
+    "pipe-io": "^4.0.0"
   },
   "engines": {
     "node": ">=14"
@@ -36,6 +35,7 @@
     "eslint-plugin-putout": "^6.13.1",
     "madrun": "^8.6.2",
     "nyc": "^15.0.0",
+    "putout": "^14.0.0",
     "supertape": "^4.8.1",
     "try-to-catch": "^3.0.0"
   }
