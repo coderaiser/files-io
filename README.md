@@ -1,7 +1,5 @@
 # Files-io [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
-========
-
 [NPMIMGURL]: https://img.shields.io/npm/v/files-io.svg?style=flat
 [BuildStatusIMGURL]: https://img.shields.io/travis/coderaiser/files-io/master.svg?style=flat
 [DependencyStatusIMGURL]: https://img.shields.io/david/coderaiser/files-io.svg?style=flat
